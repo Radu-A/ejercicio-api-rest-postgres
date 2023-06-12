@@ -1,6 +1,8 @@
 
-function getFetch(title, apiKey) {
-    return fetch(`https://www.omdbapi.com/?t=${title}&apikey=${apiKey}`);
+async function getFetch(title) {
+    const data = await fetch(`https://www.omdbapi.com/?t=${title}&apikey=${process.env.API_KEY}`);
+    let film = await data.json();
+    return film;
 }
 
 function postFetch(film, apiKey) {

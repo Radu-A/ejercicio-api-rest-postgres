@@ -4,8 +4,7 @@ require('dotenv').config();
 // Crear película
 const getFilm = async (req, res) => {
     try {
-        let response = await endPoints.getFetch(req.params.title, process.env.API_KEY);
-        let film = await response.json();
+        let film = await endPoints.getFetch(req.params.title, process.env.API_KEY);
         res.status(200).json({
             'Título': film.Title,
             'Director': film.Director,
