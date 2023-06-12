@@ -1,4 +1,4 @@
-
+const fetch = require('node-fetch');
 async function getFetch(title) {
     const data = await fetch(`https://www.omdbapi.com/?t=${title}&apikey=${process.env.API_KEY}`);
     let film = await data.json();
