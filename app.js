@@ -1,7 +1,6 @@
 // Módulos y configuración
 const express = require('express');
 const app = express();
-const fetch = require('node-fetch')();
 require('dotenv').config();
 const port = process.env.PORT;
 // Mis módulos
